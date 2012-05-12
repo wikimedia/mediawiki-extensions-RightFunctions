@@ -363,6 +363,7 @@ $messages['nl'] = array(
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
  * @author Harald Khan
+ * @author Njardarlogar
  */
 $messages['nn'] = array(
 	'rightfunctions-desc' => 'Rettbaserte parserfunksjonar',
