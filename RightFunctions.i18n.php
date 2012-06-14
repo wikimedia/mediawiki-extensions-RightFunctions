@@ -77,7 +77,7 @@ $messages['be-tarask'] = array(
 	'rightfunctions-ns' => '(з абароны прасторы назваў)',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fulup
  */
 $messages['br'] = array(
@@ -87,7 +87,7 @@ $messages['br'] = array(
 	'rightfunctions-ns' => '(adalek ar gwarez esaouennoù anv)',
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
@@ -139,7 +139,7 @@ $messages['eo'] = array(
 	'rightfunctions-ns' => '(de nomspaca protektado)',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Crazymadlover
  * @author Sanbec
  */
@@ -150,7 +150,7 @@ $messages['es'] = array(
 	'rightfunctions-ns' => '(a partir de la protección del espacio de nombres)',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Str4nd
  */
 $messages['fi'] = array(
@@ -159,7 +159,7 @@ $messages['fi'] = array(
 	'rightfunctions-ns' => '(nimiavaruuden suojauksesta)',
 );
 
-/** French (Français)
+/** French (français)
  * @author Grondin
  * @author McDutchie
  */
@@ -170,7 +170,7 @@ $messages['fr'] = array(
 	'rightfunctions-ns' => '(depuis la protection des espaces de nom)',
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -236,7 +236,7 @@ $messages['hsb'] = array(
 	'rightfunctions-ns' => '(ze škita mjenoweho ruma)',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
@@ -246,7 +246,7 @@ $messages['hu'] = array(
 	'rightfunctions-ns' => '(névtérvédelemből)',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -271,7 +271,7 @@ $messages['id'] = array(
 	'rightfunctions-ns' => '(dari pelindungan ruang nama)',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author Darth Kule
  * @author Pietrodn
  */
@@ -321,7 +321,7 @@ $messages['lb'] = array(
 	'rightfunctions-ns' => '(vun der Spär vum Nummraum)',
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  * @author Brest
  */
@@ -361,7 +361,7 @@ $messages['nl'] = array(
 	'rightfunctions-ns' => '(van naamruimtebeveiliging)',
 );
 
-/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -372,7 +372,7 @@ $messages['nn'] = array(
 	'rightfunctions-ns' => '(frå namneromvern)',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
@@ -382,7 +382,7 @@ $messages['oc'] = array(
 	'rightfunctions-ns' => '(dempuèi la proteccion dels espacis de nom)',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author Sp5uhe
  * @author ToSter
  */
@@ -410,7 +410,7 @@ $messages['ps'] = array(
 	'rightfunctions-local' => '(له سيمه ايز مخ نه)',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author Hamilton Abreu
  * @author Malafaya
  */
@@ -421,7 +421,7 @@ $messages['pt'] = array(
 	'rightfunctions-ns' => '(de protecção de espaços nominais)',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author Eduardo.mps
  */
 $messages['pt-br'] = array(
@@ -431,7 +431,7 @@ $messages['pt-br'] = array(
 	'rightfunctions-ns' => '(de proteção de espaços nominais)',
 );
 
-/** Tarandíne (Tarandíne)
+/** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
@@ -441,7 +441,7 @@ $messages['roa-tara'] = array(
 	'rightfunctions-ns' => "(da 'nu namespace protette)",
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author Ferrer
  * @author Александр Сигачёв
  */
@@ -452,7 +452,7 @@ $messages['ru'] = array(
 	'rightfunctions-ns' => '(для защиты пространства имён)',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
@@ -462,7 +462,7 @@ $messages['sk'] = array(
 	'rightfunctions-ns' => '(zo zamknutia menného priestoru)',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Rancher
  */
 $messages['sr-ec'] = array(
@@ -472,7 +472,7 @@ $messages['sr-ec'] = array(
 	'rightfunctions-sep' => ',',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬) */
+/** Serbian (Latin script) (‪srpski (latinica)‬) */
 $messages['sr-el'] = array(
 	'rightfunctions-rest1' => '$1 $2',
 	'rightfunctions-rest2' => '$1 $2$5 $3 $4',
@@ -480,7 +480,7 @@ $messages['sr-el'] = array(
 	'rightfunctions-sep' => ',',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author Lejonel
  * @author M.M.S.
  * @author Najami
