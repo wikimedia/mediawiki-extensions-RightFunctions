@@ -66,7 +66,7 @@ $messages['bar'] = array(
 	'rightfunctions-ns' => '(vu da Nãmensraumsperrung)',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -108,7 +108,7 @@ $messages['de'] = array(
 	'rightfunctions-ns' => '(von Namensraumsperrungen)',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -180,7 +180,7 @@ $messages['frp'] = array(
 	'rightfunctions-ns' => '(dês la protèccion des èspâços de noms)',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -226,7 +226,7 @@ $messages['hi'] = array(
 	'rightfunctions-desc' => 'अनुमति-आधारित पार्सर कार्य',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
