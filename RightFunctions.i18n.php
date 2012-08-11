@@ -292,6 +292,15 @@ $messages['ja'] = array(
 	'rightfunctions-ns' => '(名前空間保護より)',
 );
 
+/** Georgian (ქართული)
+ * @author David1010
+ */
+$messages['ka'] = array(
+	'rightfunctions-casc' => '(კასკადური წყაროებისათვის)',
+	'rightfunctions-local' => '(ლოკალური გვერდისათვის)',
+	'rightfunctions-ns' => '(სახელთა სივრცის დასაცავად)',
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author Lovekhmer
  * @author Thearith
