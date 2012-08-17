@@ -57,6 +57,16 @@ $messages['arz'] = array(
 	'rightfunctions-ns' => '(من حماية نطاق)',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'rightfunctions-desc' => "Funciones d'analís basaes en permisos",
+	'rightfunctions-casc' => '(dende fontes en cascada)',
+	'rightfunctions-local' => '(dende páxina llocal)',
+	'rightfunctions-ns' => "(dende protección d'espaciu de nomes)",
+);
+
 /** Bavarian (Boarisch)
  * @author Man77
  */
