@@ -294,9 +294,14 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Fryed-peach
+ * @author Shirayuki
  */
 $messages['ja'] = array(
-	'rightfunctions-desc' => 'パーミッションベースのパーサー関数',
+	'rightfunctions-desc' => 'アクセス許可ベースのパーサー関数',
+	'rightfunctions-rest1' => '$1 $2',
+	'rightfunctions-rest2' => '$1 $2$5 $3 $4',
+	'rightfunctions-rest3' => '$1 $2$7 $3 $4$7 $5 $6',
+	'rightfunctions-sep' => ',',
 	'rightfunctions-casc' => '(カスケード元より)',
 	'rightfunctions-local' => '(ローカルページより)',
 	'rightfunctions-ns' => '(名前空間保護より)',
