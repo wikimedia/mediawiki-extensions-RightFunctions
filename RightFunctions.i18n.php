@@ -76,7 +76,7 @@ $messages['bar'] = array(
 	'rightfunctions-ns' => '(vu da Nãmensraumsperrung)',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -363,7 +363,7 @@ $messages['mr'] = array(
 	'rightfunctions-desc' => 'परवानगी आधारित पार्सर कार्ये',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬)
+/** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -384,7 +384,7 @@ $messages['nl'] = array(
 	'rightfunctions-ns' => '(van naamruimtebeveiliging)',
 );
 
-/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -485,7 +485,7 @@ $messages['sk'] = array(
 	'rightfunctions-ns' => '(zo zamknutia menného priestoru)',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Rancher
  */
 $messages['sr-ec'] = array(
@@ -495,7 +495,7 @@ $messages['sr-ec'] = array(
 	'rightfunctions-sep' => ',',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬) */
+/** Serbian (Latin script) (srpski (latinica)‎) */
 $messages['sr-el'] = array(
 	'rightfunctions-rest1' => '$1 $2',
 	'rightfunctions-rest2' => '$1 $2$5 $3 $4',
