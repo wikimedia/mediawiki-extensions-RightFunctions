@@ -322,6 +322,16 @@ $messages['km'] = array(
 	'rightfunctions-ns' => '(ពីការការពារលំហឈ្មោះ)',
 );
 
+/** Korean (한국어)
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'rightfunctions-desc' => '허가 기반의 파서 함수',
+	'rightfunctions-casc' => '(계단식 원본에서)',
+	'rightfunctions-local' => '(로컬 문서에서)',
+	'rightfunctions-ns' => '(이름공간 보호에서)',
+);
+
 /** Colognian (Ripoarisch)
  * @author Purodha
  */
