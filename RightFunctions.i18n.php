@@ -8,9 +8,6 @@
 
 $messages = array();
 
-/* English
- * @author Ryan Schmidt
- */
 $messages['en'] = array(
 	'rightfunctions-desc'  => 'Permission-based parser functions',
 	'rightfunctions-rest1' => '$1 $2', # do not translate this message
@@ -495,7 +492,8 @@ $messages['sr-ec'] = array(
 	'rightfunctions-sep' => ',',
 );
 
-/** Serbian (Latin script) (srpski (latinica)‎) */
+/** Serbian (Latin script) (srpski (latinica)‎)
+ */
 $messages['sr-el'] = array(
 	'rightfunctions-rest1' => '$1 $2',
 	'rightfunctions-rest2' => '$1 $2$5 $3 $4',
@@ -555,4 +553,3 @@ $messages['vi'] = array(
 	'rightfunctions-local' => '(từ trang nội bộ)',
 	'rightfunctions-ns' => '(từ khóa không gian tên)',
 );
-
