@@ -563,3 +563,10 @@ $messages['vi'] = array(
 	'rightfunctions-local' => '(từ trang nội bộ)',
 	'rightfunctions-ns' => '(từ khóa không gian tên)',
 );
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Yfdyh000
+ */
+$messages['zh-hans'] = array(
+	'rightfunctions-desc' => '基于权限的解析器功能',
+);
