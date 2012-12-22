@@ -482,6 +482,13 @@ $messages['ru'] = array(
 	'rightfunctions-ns' => '(для защиты пространства имён)',
 );
 
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'rightfunctions-local' => '(ප්‍රාදේශීය පිටුවකින්)',
+);
+
 /** Slovak (slovenčina)
  * @author Helix84
  */
