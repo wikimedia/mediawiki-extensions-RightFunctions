@@ -461,6 +461,13 @@ $messages['pt-br'] = array(
 	'rightfunctions-ns' => '(de proteção de espaços nominais)',
 );
 
+/** Romanian (română)
+ * @author Minisarm
+ */
+$messages['ro'] = array(
+	'rightfunctions-local' => '(de la o pagină locală)',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
@@ -559,6 +566,16 @@ $messages['tr'] = array(
 	'rightfunctions-casc' => '(kademeli kaynaklardan)',
 	'rightfunctions-local' => '(yerel sayfadan)',
 	'rightfunctions-ns' => '(ad alanı korumasından)',
+);
+
+/** Ukrainian (українська)
+ * @author Ата
+ */
+$messages['uk'] = array(
+	'rightfunctions-desc' => 'Парсерні функції на основі дозволів',
+	'rightfunctions-casc' => '(із каскадних джерел)',
+	'rightfunctions-local' => '(із локальної сторінки)',
+	'rightfunctions-ns' => '(із захисту простору імен)',
 );
 
 /** Vietnamese (Tiếng Việt)
