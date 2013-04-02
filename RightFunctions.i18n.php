@@ -28,10 +28,55 @@ $messages['en'] = array(
  */
 $messages['qqq'] = array(
 	'rightfunctions-desc' => '{{desc|name=Right Functions|url=http://www.mediawiki.org/wiki/Extension:RightFunctions}}',
-	'rightfunctions-rest1' => '{{optional}}',
-	'rightfunctions-rest2' => '{{optional}}',
-	'rightfunctions-rest3' => '{{optional}}',
-	'rightfunctions-sep' => '{{optional}}',
+	'rightfunctions-rest1' => '{{optional}}
+Parameters:
+* $1 - list of any one of the following: cascade protection sources, restrictions, namespaces
+* $2 - any one of the following messages:
+** {{msg-mw|Rightfunctions-casc}}
+** {{msg-mw|Rightfunctions-local}}
+** {{msg-mw|Rightfunctions-ns}}',
+	'rightfunctions-rest2' => '{{optional}}
+Parameters:
+* $1 - list of any one of the following: cascade protection sources, restrictions
+* $2 - any one of the following messages:
+** {{msg-mw|Rightfunctions-casc}}
+** {{msg-mw|Rightfunctions-local}}
+* $3 - list of any one of the following: cascade protection sources, namespaces
+* $4 - any one of the following messages:
+** {{msg-mw|Rightfunctions-casc}}
+** {{msg-mw|Rightfunctions-ns}}
+* $5 - separator {{msg-mw|Rightfunctions-sep}}',
+	'rightfunctions-rest3' => '{{optional}}
+Parameters:
+* $1 - list of restrictions
+* $2 - {{msg-mw|Rightfunctions-local}}
+* $3 - list of cascade protection sources
+* $4 - {{msg-mw|Rightfunctions-casc}}
+* $5 - list of namespaces
+* $6 - {{msg-mw|Rightfunctions-ns}}
+* $7 - separator {{msg-mw|Rightfunctions-sep}}',
+	'rightfunctions-sep' => '{{optional}}
+Used as a separator:
+* as <code>$5</code> in {{msg-mw|Rightfunctions-rest2}}
+* as <code>$7</code> in {{msg-mw|Rightfunctions-rest3}}',
+	'rightfunctions-casc' => 'This message follows a list of the cascade protection sources.
+
+Used:
+* as <code>$2</code> in {{msg-mw|Rightfunctions-rest1}}
+* as <code>$2</code> or <code>$4</code> in {{msg-mw|Rightfunctions-rest2}}
+* as <code>$4</code> in {{msg-mw|Rightfunctions-rest3}}',
+	'rightfunctions-local' => 'This message follows a list of the restrictions.
+
+Used:
+* as <code>$2</code> in {{msg-mw|Rightfunctions-rest1}}
+* as <code>$2</code> in {{msg-mw|Rightfunctions-rest2}}
+* as <code>$2</code> in {{msg-mw|Rightfunctions-rest3}}',
+	'rightfunctions-ns' => 'This message follows a list of the namespaces.
+
+Used:
+* as <code>$2</code> in {{msg-mw|Rightfunctions-rest1}}
+* as <code>$4</code> in {{msg-mw|Rightfunctions-rest2}}
+* as <code>$6</code> in {{msg-mw|Rightfunctions-rest3}}',
 );
 
 /** Arabic (العربية)
@@ -297,9 +342,9 @@ $messages['it'] = array(
 $messages['ja'] = array(
 	'rightfunctions-desc' => 'アクセス許可ベースのパーサー関数',
 	'rightfunctions-rest1' => '$1 $2',
-	'rightfunctions-rest2' => '$1 $2$5 $3 $4',
-	'rightfunctions-rest3' => '$1 $2$7 $3 $4$7 $5 $6',
-	'rightfunctions-sep' => ',',
+	'rightfunctions-rest2' => '$1 $2$5$3 $4',
+	'rightfunctions-rest3' => '$1 $2$7$3 $4$7$5 $6',
+	'rightfunctions-sep' => '、',
 	'rightfunctions-casc' => '(カスケード元より)',
 	'rightfunctions-local' => '(ローカルページより)',
 	'rightfunctions-ns' => '(名前空間保護より)',
