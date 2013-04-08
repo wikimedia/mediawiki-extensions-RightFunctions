@@ -635,8 +635,10 @@ $messages['vi'] = array(
 );
 
 /** Simplified Chinese (中文（简体）‎)
+ * @author Kuailong
  * @author Yfdyh000
  */
 $messages['zh-hans'] = array(
 	'rightfunctions-desc' => '基于权限的解析器功能',
+	'rightfunctions-local' => '（来自本地页面）',
 );
