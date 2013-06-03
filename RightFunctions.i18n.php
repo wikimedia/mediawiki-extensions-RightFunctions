@@ -416,7 +416,7 @@ $messages['mr'] = array(
 	'rightfunctions-desc' => 'परवानगी आधारित पार्सर कार्ये',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎)
+/** Norwegian Bokmål (norsk bokmål)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -437,7 +437,7 @@ $messages['nl'] = array(
 	'rightfunctions-ns' => '(van naamruimtebeveiliging)',
 );
 
-/** Norwegian Nynorsk (norsk (nynorsk)‎)
+/** Norwegian Nynorsk (norsk nynorsk)
  * @author Harald Khan
  * @author Njardarlogar
  */
