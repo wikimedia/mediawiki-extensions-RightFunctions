@@ -488,13 +488,14 @@ $messages['ps'] = array(
 
 /** Portuguese (português)
  * @author Hamilton Abreu
+ * @author Luckas
  * @author Malafaya
  */
 $messages['pt'] = array(
 	'rightfunctions-desc' => 'Funções do analisador sintáctico baseadas em permissões',
 	'rightfunctions-casc' => '(de fontes em cascata)',
 	'rightfunctions-local' => '(de página local)',
-	'rightfunctions-ns' => '(de protecção de espaços nominais)',
+	'rightfunctions-ns' => '(de proteção de espaços nominais)',
 );
 
 /** Brazilian Portuguese (português do Brasil)
