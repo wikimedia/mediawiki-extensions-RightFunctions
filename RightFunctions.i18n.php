@@ -203,6 +203,13 @@ $messages['es'] = array(
 	'rightfunctions-ns' => '(a partir de la protección del espacio de nombres)',
 );
 
+/** Persian (فارسی)
+ * @author Reza1615
+ */
+$messages['fa'] = array(
+	'rightfunctions-sep' => '،',
+);
+
 /** Finnish (suomi)
  * @author Str4nd
  */
