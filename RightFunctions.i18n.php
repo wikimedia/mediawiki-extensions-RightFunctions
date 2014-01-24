@@ -204,10 +204,13 @@ $messages['es'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Armin1392
  * @author Reza1615
  */
 $messages['fa'] = array(
 	'rightfunctions-sep' => '،',
+	'rightfunctions-local' => '(از صفحهٔ داخلی)',
+	'rightfunctions-ns' => '(از حفاظت فضای نام)',
 );
 
 /** Finnish (suomi)
