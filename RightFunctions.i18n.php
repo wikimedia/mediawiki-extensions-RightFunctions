@@ -208,7 +208,9 @@ $messages['es'] = array(
  * @author Reza1615
  */
 $messages['fa'] = array(
+	'rightfunctions-desc' => 'بر اساس مجوز عملیات تجزیه‌کننده',
 	'rightfunctions-sep' => '،',
+	'rightfunctions-casc' => '(از منابع جاری)',
 	'rightfunctions-local' => '(از صفحهٔ داخلی)',
 	'rightfunctions-ns' => '(از حفاظت فضای نام)',
 );
