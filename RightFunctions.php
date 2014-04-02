@@ -15,12 +15,13 @@ if( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'RightFunctions',
-	'version' => '1.10',
+	'version' => '1.11.0',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:RightFunctions',
 	'author' => 'Ryan Schmidt',
 	'descriptionmsg' => 'rightfunctions-desc',
 );
 
+$wgMessagesDirs['RightFunctions'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['RightFunctions'] = dirname(__FILE__) . '/RightFunctions.i18n.php';
 $wgExtensionMessagesFiles['RightFunctionsMagic'] = dirname(__FILE__) . '/RightFunctions.i18n.magic.php';
 $wgHooks['ParserFirstCallInit'][] = 'ExtRightFunctions::onParserFirstCallInit';
@@ -294,7 +295,7 @@ Class ExtRightFunctions {
 
 	public static function getrestrictions(&$parser, $right = 'edit', $page = '', $returnall = false) {
 		global $wgRightFunctionsAllowCaching, $wgRightFunctionsDisableFunctions, $wgRestrictionLevels, $wgNamespaceProtection;
-		
+
 		if(in_array('getrestrictions', $wgRightFunctionsDisableFunctions)) {
 			return;
 		}
@@ -305,7 +306,7 @@ Class ExtRightFunctions {
 		$localmsg = wfMsg('rightfunctions-local');
 		$cascmsg = wfMsg('rightfunctions-casc');
 		$nsmsg = wfMsg('rightfunctions-ns');
-		
+
 		if($page) {
 			$title = Title::newFromText($page);
 			if(!$title->exists()) {
