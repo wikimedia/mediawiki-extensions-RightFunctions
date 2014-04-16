@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Bjankuloski06",
-            "Brest"
-        ]
-    },
-    "rightfunctions-desc": "Парсер функции на основа на дозволи",
-    "rightfunctions-casc": "(од каскадни извори)",
-    "rightfunctions-local": "(од локална страница)",
-    "rightfunctions-ns": "(од заштита на именски простор)"
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06",
+			"Brest"
+		]
+	},
+	"rightfunctions-desc": "Парсер функции на основа на дозволи",
+	"rightfunctions-casc": "(од каскадни извори)",
+	"rightfunctions-local": "(од локална страница)",
+	"rightfunctions-ns": "(од заштита на именски простор)"
 }

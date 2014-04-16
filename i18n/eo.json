@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Yekrats"
-        ]
-    },
-    "rightfunctions-desc": "Rajtecaj funkcioj de sintaksaj analiziloj",
-    "rightfunctions-casc": "(de kaskadaj fontoj)",
-    "rightfunctions-local": "(de loka paĝo)",
-    "rightfunctions-ns": "(de nomspaca protektado)"
+	"@metadata": {
+		"authors": [
+			"Yekrats"
+		]
+	},
+	"rightfunctions-desc": "Rajtecaj funkcioj de sintaksaj analiziloj",
+	"rightfunctions-casc": "(de kaskadaj fontoj)",
+	"rightfunctions-local": "(de loka paĝo)",
+	"rightfunctions-ns": "(de nomspaca protektado)"
 }

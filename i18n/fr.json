@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Grondin",
-            "McDutchie"
-        ]
-    },
-    "rightfunctions-desc": "Fonctions pour le parseur basées sur des permissions",
-    "rightfunctions-casc": "(depuis les sources en cascade)",
-    "rightfunctions-local": "(depuis une page locale)",
-    "rightfunctions-ns": "(depuis la protection des espaces de nom)"
+	"@metadata": {
+		"authors": [
+			"Grondin",
+			"McDutchie"
+		]
+	},
+	"rightfunctions-desc": "Fonctions pour le parseur basées sur des permissions",
+	"rightfunctions-casc": "(depuis les sources en cascade)",
+	"rightfunctions-local": "(depuis une page locale)",
+	"rightfunctions-ns": "(depuis la protection des espaces de nom)"
 }
