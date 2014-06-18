@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Man77"
+			"Man77",
+			"Matthias Klostermayr"
 		]
 	},
 	"rightfunctions-casc": "(vu ana kaskadiaradn Quöin)",
 	"rightfunctions-local": "(vu lokale Seitn)",
-	"rightfunctions-ns": "(vu da Nãmensraumsperrung)"
+	"rightfunctions-ns": "(vo Namasramspearunga)"
 }
