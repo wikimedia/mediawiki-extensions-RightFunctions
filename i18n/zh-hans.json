@@ -2,9 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Kuailong",
-			"Yfdyh000"
+			"Yfdyh000",
+			"Liuxinyu970226"
 		]
 	},
 	"rightfunctions-desc": "基于权限的解析器功能",
-	"rightfunctions-local": "（来自本地页面）"
+	"rightfunctions-casc": "（从级联源）",
+	"rightfunctions-local": "（来自本地页面）",
+	"rightfunctions-ns": "（从名字空间保护）"
 }
