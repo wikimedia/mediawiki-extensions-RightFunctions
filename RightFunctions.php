@@ -302,10 +302,10 @@ Class ExtRightFunctions {
 		if(!$wgRightFunctionsAllowCaching) {
 			$parser->disableCache();
 		}
-		$sep = wfMsg('rightfunctions-sep');
-		$localmsg = wfMsg('rightfunctions-local');
-		$cascmsg = wfMsg('rightfunctions-casc');
-		$nsmsg = wfMsg('rightfunctions-ns');
+		$sep = wfMessage('rightfunctions-sep')->text();
+		$localmsg = wfMessage('rightfunctions-local')->text();
+		$cascmsg = wfMessage('rightfunctions-casc')->text();
+		$nsmsg = wfMessage('rightfunctions-ns')->text();
 
 		if($page) {
 			$title = Title::newFromText($page);
@@ -352,19 +352,19 @@ Class ExtRightFunctions {
 		$nsrest = trim(trim($nsrest, $sep));
 		if($returnall) {
 			if($iscascade && $isns && $localrest) {
-				return wfMsg('rightfunctions-rest3', array( $localrest, $localmsg, $cascrest, $cascmsg, $nsrest, $nsmsg, $sep ) );
+				return wfMessage('rightfunctions-rest3', $localrest, $localmsg, $cascrest, $cascmsg, $nsrest, $nsmsg, $sep )->text();
 			} elseif($iscascade && $localrest) {
-				return wfMsg('rightfunctions-rest2', array( $localrest, $localmsg, $cascrest, $cascmsg, $sep ) );
+				return wfMessage('rightfunctions-rest2', $localrest, $localmsg, $cascrest, $cascmsg, $sep )->text();
 			} elseif($isns && $localrest) {
-				return wfMsg('rightfunctions-rest2', array( $localrest, $localmsg, $nsrest, $nsmsg, $sep ) );
+				return wfMessage('rightfunctions-rest2', $localrest, $localmsg, $nsrest, $nsmsg, $sep )->text();
 			} elseif($iscascade && $isns) {
-				return wfMsg('rightfunctions-rest2', array( $cascrest, $cascmsg, $nsrest, $nsmsg, $sep ) );
+				return wfMessage('rightfunctions-rest2', $cascrest, $cascmsg, $nsrest, $nsmsg, $sep )->text();
 			} elseif($iscascade) {
-				return wfMsg('rightfunctions-rest1', array( $cascrest, $cascmsg ) );
+				return wfMessage('rightfunctions-rest1', $cascrest, $cascmsg )->text();
 			} elseif($isns) {
-				return wfMsg('rightfunctions-rest1', array( $nsrest, $nsmsg ) );
+				return wfMessage('rightfunctions-rest1', $nsrest, $nsmsg )->text();
 			} elseif($localrest != '') {
-				return wfMsg('rightfunctions-rest1', array( $localrest, $localmsg ) );
+				return wfMessage('rightfunctions-rest1', $localrest, $localmsg )->text();
 			} else {
 				return '';
 			}
