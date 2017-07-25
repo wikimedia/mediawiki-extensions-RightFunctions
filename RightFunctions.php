@@ -1,37 +1,55 @@
 <?php
-/*
-* RightFunctions extension by Ryan Schmidt
-* Permission-based parser functions
-* Check http://www.mediawiki.org/wiki/Extension:RightFunctions/Doc for more info on what everything does
-* Please note that this can be used superficially to hide information from those with certain rights
-*/
+/**
+ * RightFunctions extension to MediaWiki
+ *
+ * Provides permission-based parser functions
+ *
+ * @link https://www.mediawiki.org/wiki/Extension:RightFunctions Documentation
+ * @link https://www.mediawiki.org/wiki/Extension_talk:RightFunctions Support
+ * @link https://phabricator.wikimedia.org/diffusion/ERIF/ Source code
+ *
+ * @file
+ * @ingroup Extensions
+ * @package MediaWiki
+ *
+ * @author Ryan Schmidt (Skizzerz)
+ * @copyright (C) 2007 Ryan Schmidt
+ * @license https://unlicense.org/ Unlicense
+ */
 
-if( !defined( 'MEDIAWIKI' ) ) {
-	echo "This file is an extension of the MediaWiki software and cannot be used standalone\n";
-	die( 1 );
+// Ensure that the script cannot be executed outside of MediaWiki.
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die( 'This is an extension to MediaWiki and cannot be run standalone.' );
 }
 
-//credits
+// Display extension properties on MediaWiki.
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'RightFunctions',
-	'version' => '1.11.0',
+	'version' => '1.12.0',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:RightFunctions',
-	'author' => 'Ryan Schmidt',
+	'author' => array(
+		'Ryan Schmidt',
+		'...'
+	),
 	'descriptionmsg' => 'rightfunctions-desc',
+	'license-name' => 'Unlicense'
 );
 
+// Register extension messages and other localisation.
 $wgMessagesDirs['RightFunctions'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['RightFunctions'] = dirname(__FILE__) . '/RightFunctions.i18n.php';
-$wgExtensionMessagesFiles['RightFunctionsMagic'] = dirname(__FILE__) . '/RightFunctions.i18n.magic.php';
+$wgExtensionMessagesFiles['RightFunctionsMagic'] = __DIR__ . '/RightFunctions.i18n.magic.php';
+
+// Register extension hooks.
 $wgHooks['ParserFirstCallInit'][] = 'ExtRightFunctions::onParserFirstCallInit';
 
-//Default globals.
+// Set configuration settings and their defaults.
 $wgRightFunctionsUserGroups = array( '*', 'user', 'autoconfirmed', 'sysop', 'bureaucrat' );
 $wgRightFunctionsAllowExpensiveQueries = true;
 $wgRightFunctionsAllowCaching = false;
 $wgRightFunctionsDisableFunctions = array();
 
+// Do the extension's action.
 Class ExtRightFunctions {
 	public static function onParserFirstCallInit( $parser ) {
 		$parser->setFunctionHook( 'ifright', array( __CLASS__, 'ifright' ) );
