@@ -73,7 +73,7 @@ Class ExtRightFunctions {
 			return;
 		}
 		if(!$wgRightFunctionsAllowCaching) {
-			$parser->disableCache();
+			$parser->getOutput()->updateCacheExpiry( 0 );
 		}
 		if($wgUser->isAllowed($right)) {
 			return $then;
@@ -87,7 +87,7 @@ Class ExtRightFunctions {
 			return;
 		}
 		if(!$wgRightFunctionsAllowCaching) {
-			$parser->disableCache();
+			$parser->getOutput()->updateCacheExpiry( 0 );
 		}
 		$user = User::newFromName($name);
 		$user->load();
@@ -136,7 +136,7 @@ Class ExtRightFunctions {
 			return;
 		}
 		if(!$wgRightFunctionsAllowCaching) {
-			$parser->disableCache();
+			$parser->getOutput()->updateCacheExpiry( 0 );
 		}
 		if($name) {
 			$user = User::newFromName($name);
@@ -158,7 +158,7 @@ Class ExtRightFunctions {
 			return;
 		}
 		if(!$wgRightFunctionsAllowCaching) {
-			$parser->disableCache();
+			$parser->getOutput()->updateCacheExpiry( 0 );
 		}
 		if($name) {
 			$user = User::newFromName($name);
@@ -183,7 +183,7 @@ Class ExtRightFunctions {
 			return;
 		}
 		if(!$wgRightFunctionsAllowCaching) {
-			$parser->disableCache();
+			$parser->getOutput()->updateCacheExpiry( 0 );
 		}
 		if($name) {
 			$user = User::newFromName($name);
@@ -238,7 +238,7 @@ Class ExtRightFunctions {
 			return;
 		}
 		if(!$wgRightFunctionsAllowCaching) {
-			$parser->disableCache();
+			$parser->getOutput()->updateCacheExpiry( 0 );
 		}
 		if($page) {
 			$title = Title::newFromText($page);
@@ -259,7 +259,7 @@ Class ExtRightFunctions {
 			return;
 		}
 		if(!$wgRightFunctionsAllowCaching) {
-			$parser->disableCache();
+			$parser->getOutput()->updateCacheExpiry( 0 );
 		}
 		$user = User::newFromName($name);
 		$user->load();
@@ -282,7 +282,7 @@ Class ExtRightFunctions {
 			return;
 		}
 		if(!$wgRightFunctionsAllowCaching) {
-			$parser->disableCache();
+			$parser->getOutput()->updateCacheExpiry( 0 );
 		}
 		if($page) {
 			$title = Title::newFromText($page);
@@ -318,7 +318,7 @@ Class ExtRightFunctions {
 			return;
 		}
 		if(!$wgRightFunctionsAllowCaching) {
-			$parser->disableCache();
+			$parser->getOutput()->updateCacheExpiry( 0 );
 		}
 		$sep = wfMessage('rightfunctions-sep')->text();
 		$localmsg = wfMessage('rightfunctions-local')->text();
