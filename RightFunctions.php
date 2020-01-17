@@ -109,7 +109,7 @@ Class ExtRightFunctions {
 				if ( $found || self::ifright($parser, $parts[0], true, false) ) {
 					return $parts[1];
 				} else {
-					$mwDefault =& MagicWord::get( 'default' );
+					$mwDefault =& \MediaWiki\MediaWikiServices::getInstance()->getMagicWordFactory()->get( 'default' );
 					if ( $mwDefault->matchStartAndRemove( $parts[0] ) ) {
 						$default = $parts[1];
 					}
@@ -211,7 +211,7 @@ Class ExtRightFunctions {
 				if ( $found || self::ifgroup($parser, $parts[0], true, false) ) {
 					return $parts[1];
 				} else {
-					$mwDefault =& MagicWord::get( 'default' );
+					$mwDefault =& \MediaWiki\MediaWikiServices::getInstance()->getMagicWordFactory()->get( 'default' );
 					if ( $mwDefault->matchStartAndRemove( $parts[0] ) ) {
 						$default = $parts[1];
 					}
