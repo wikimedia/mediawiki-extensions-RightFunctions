@@ -68,14 +68,14 @@ Class ExtRightFunctions {
 	}
 
 	public static function ifright( &$parser, $right = '', $then = '', $else = '' ) {
-		global $wgUser, $wgRightFunctionsAllowCaching, $wgRightFunctionsDisableFunctions;
+		global $wgRightFunctionsAllowCaching, $wgRightFunctionsDisableFunctions;
 		if(in_array('ifright', $wgRightFunctionsDisableFunctions)) {
 			return;
 		}
 		if(!$wgRightFunctionsAllowCaching) {
 			$parser->getOutput()->updateCacheExpiry( 0 );
 		}
-		if($wgUser->isAllowed($right)) {
+		if($parser->getUser()->isAllowed($right)) {
 			return $then;
 		}
 		return $else;
@@ -131,7 +131,7 @@ Class ExtRightFunctions {
 	}
 
 	public static function userrights( &$parser, $name = '' ) {
-		global $wgUser, $wgRightFunctionsDisableFunctions, $wgRightFunctionsAllowCaching;
+		global $wgRightFunctionsDisableFunctions, $wgRightFunctionsAllowCaching;
 		if(in_array('userrights', $wgRightFunctionsDisableFunctions)) {
 			return;
 		}
@@ -142,7 +142,7 @@ Class ExtRightFunctions {
 			$user = User::newFromName($name);
 			$user->load();
 		} else {
-			$user = $wgUser;
+			$user = $parser->getUser();
 		}
 		$userrights = "";
 		$rights = $user->getRights();
@@ -153,7 +153,7 @@ Class ExtRightFunctions {
 	}
 
 	public static function usergroup( &$parser, $name = '' ) {
-		global $wgUser, $wgRightFunctionsUserGroups, $wgRightFunctionsDisableFunctions, $wgRightFunctionsAllowCaching;
+		global $wgRightFunctionsUserGroups, $wgRightFunctionsDisableFunctions, $wgRightFunctionsAllowCaching;
 		if(in_array('usergroup', $wgRightFunctionsDisableFunctions)) {
 			return;
 		}
@@ -163,11 +163,10 @@ Class ExtRightFunctions {
 		if($name) {
 			$user = User::newFromName($name);
 			$user->load();
-			$usergroups = $user->getEffectiveGroups(!$wgRightFunctionsAllowCaching);
 		} else {
-			$user = $wgUser;
-			$usergroups = $wgUser->getEffectiveGroups(!$wgRightFunctionsAllowCaching);
+			$user = $parser->getUser();
 		}
+		$usergroups = $user->getEffectiveGroups(!$wgRightFunctionsAllowCaching);
 		$right = "";
 		foreach($wgRightFunctionsUserGroups as $value) {
 			if(in_array($value, $usergroups)) {
@@ -178,7 +177,7 @@ Class ExtRightFunctions {
 	}
 
 	public static function ifgroup(&$parser, $group = '', $then = '', $else = '', $name = '') {
-		global $wgUser, $wgRightFunctionsDisableFunctions, $wgRightFunctionsAllowCaching;
+		global $wgRightFunctionsDisableFunctions, $wgRightFunctionsAllowCaching;
 		if(in_array('ifgroup', $wgRightFunctionsDisableFunctions)) {
 			return;
 		}
@@ -188,11 +187,10 @@ Class ExtRightFunctions {
 		if($name) {
 			$user = User::newFromName($name);
 			$user->load();
-			$usergroups = $user->getEffectiveGroups(!$wgRightFunctionsAllowCaching);
 		} else {
-			$user = $wgUser;
-			$usergroups = $wgUser->getEffectiveGroups(!$wgRightFunctionsAllowCaching);
+			$user = $parser->getUser();
 		}
+		$usergroups = $user->getEffectiveGroups(!$wgRightFunctionsAllowCaching);
 		if(in_array($group, $usergroups)) {
 			return $then;
 		}
@@ -233,7 +231,7 @@ Class ExtRightFunctions {
 	}
 
 	public static function ifpageright(&$parser, $right = '', $then = '', $else = '', $page = '') {
-		global $wgUser, $wgRightFunctionsDisableFunctions, $wgRightFunctionsAllowExpensiveQueries, $wgRightFunctionsAllowCaching;
+		global $wgRightFunctionsDisableFunctions, $wgRightFunctionsAllowExpensiveQueries, $wgRightFunctionsAllowCaching;
 		if(in_array('ifpageright', $wgRightFunctionsDisableFunctions)) {
 			return;
 		}
