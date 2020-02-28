@@ -268,7 +268,14 @@ Class ExtRightFunctions {
 		} else {
 			$title = $parser->getTitle();
 		}
-		if(!$title->getUserPermissionsErrors($right, $user, $wgRightFunctionsAllowExpensiveQueries)) {
+
+		$rigor = $wgRightFunctionsAllowExpensiveQueries ?
+			\MediaWiki\Permissions\PermissionManager::RIGOR_SECURE :
+			\MediaWiki\Permissions\PermissionManager::RIGOR_QUICK;
+		$errors = \MediaWiki\MediaWikiServices::getInstance()->getPermissionManager()
+			->getPermissionErrors($right, $user, $title, $rigor);
+
+		if ( !$errors ) {
 			return $then;
 		}
 		return $else;
