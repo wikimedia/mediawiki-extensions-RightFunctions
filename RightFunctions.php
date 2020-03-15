@@ -17,35 +17,17 @@
  * @license https://unlicense.org/ Unlicense
  */
 
-// Ensure that the script cannot be executed outside of MediaWiki.
-if ( !defined( 'MEDIAWIKI' ) ) {
-	die( 'This is an extension to MediaWiki and cannot be run standalone.' );
+if ( function_exists( 'wfLoadExtension' ) ) {
+	wfLoadExtension( 'RightFunctions' );
+	// Keep i18n globals so mergeMessageFileList.php doesn't break
+	$wgMessagesDirs['RightFunctions'] = __DIR__ . '/i18n';
+	$wgExtensionMessagesFiles['RightFunctionsMagic'] = __DIR__ . '/RightFunctions.i18n.magic.php';
+	wfWarn(
+		'Deprecated PHP entry point used for the RightFunctions extension. ' .
+		'Please use wfLoadExtension() instead, ' .
+		'see https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Extension_registration for more details.'
+	);
+	return;
+} else {
+	die( 'This version of the RightFunctions extension requires MediaWiki 1.33+' );
 }
-
-// Display extension properties on MediaWiki.
-$wgExtensionCredits['parserhook'][] = array(
-	'path' => __FILE__,
-	'name' => 'RightFunctions',
-	'version' => '1.12.0',
-	'url' => 'https://www.mediawiki.org/wiki/Extension:RightFunctions',
-	'author' => array(
-		'Ryan Schmidt',
-		'...'
-	),
-	'descriptionmsg' => 'rightfunctions-desc',
-	'license-name' => 'Unlicense'
-);
-
-// Register extension messages and other localisation.
-$wgMessagesDirs['RightFunctions'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['RightFunctionsMagic'] = __DIR__ . '/RightFunctions.i18n.magic.php';
-
-$wgAutoloadClasses['ExtRightFunctions'] = __DIR__ . '/ExtRightFunctions.php';
-// Register extension hooks.
-$wgHooks['ParserFirstCallInit'][] = 'ExtRightFunctions::onParserFirstCallInit';
-
-// Set configuration settings and their defaults.
-$wgRightFunctionsUserGroups = array( '*', 'user', 'autoconfirmed', 'sysop', 'bureaucrat' );
-$wgRightFunctionsAllowExpensiveQueries = true;
-$wgRightFunctionsAllowCaching = false;
-$wgRightFunctionsDisableFunctions = array();
