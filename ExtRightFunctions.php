@@ -1,5 +1,8 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+use MediaWiki\User\UserGroupManager;
+
 class ExtRightFunctions {
 	public static function onParserFirstCallInit( $parser ) {
 		$parser->setFunctionHook( 'ifright', array( __CLASS__, 'ifright' ) );
@@ -116,7 +119,8 @@ class ExtRightFunctions {
 		} else {
 			$user = $parser->getUser();
 		}
-		$usergroups = $user->getEffectiveGroups(!$wgRightFunctionsAllowCaching);
+		$usergroups = MediaWikiServices::getInstance()->getUserGroupManager()
+			->getUserEffectiveGroups( $user, UserGroupManager::READ_NORMAL, !$wgRightFunctionsAllowCaching );
 		$right = "";
 		foreach($wgRightFunctionsUserGroups as $value) {
 			if(in_array($value, $usergroups)) {
@@ -140,7 +144,8 @@ class ExtRightFunctions {
 		} else {
 			$user = $parser->getUser();
 		}
-		$usergroups = $user->getEffectiveGroups(!$wgRightFunctionsAllowCaching);
+		$usergroups = MediaWikiServices::getInstance()->getUserGroupManager()
+			->getUserEffectiveGroups( $user, UserGroupManager::READ_NORMAL, !$wgRightFunctionsAllowCaching );
 		if(in_array($group, $usergroups)) {
 			return $then;
 		}
