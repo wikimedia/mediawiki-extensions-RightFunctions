@@ -28,7 +28,14 @@ class ExtRightFunctions {
 		if(!$wgRightFunctionsAllowCaching) {
 			$parser->getOutput()->updateCacheExpiry( 0 );
 		}
-		if($parser->getUser()->isAllowed($right)) {
+		if ( method_exists( $parser, 'getUserIdentity' ) ) {
+			// MW 1.36+
+			$user = MediaWikiServices::getInstance()
+				->getUserFactory()->newFromUserIdentity( $parser->getUserIdentity() );
+		} else {
+			$user = $parser->getUser();
+		}
+		if($user->isAllowed($right)) {
 			return $then;
 		}
 		return $else;
@@ -95,7 +102,12 @@ class ExtRightFunctions {
 			$user = User::newFromName($name);
 			$user->load();
 		} else {
-			$user = $parser->getUser();
+			if ( method_exists( $parser, 'getUserIdentity' ) ) {
+				// MW 1.36+
+				$user = $parser->getUserIdentity();
+			} else {
+				$user = $parser->getUser();
+			}
 		}
 		$userrights = "";
 		$rights = MediaWikiServices::getInstance()->getPermissionManager()->getUserPermissions( $user );
@@ -117,7 +129,12 @@ class ExtRightFunctions {
 			$user = User::newFromName($name);
 			$user->load();
 		} else {
-			$user = $parser->getUser();
+			if ( method_exists( $parser, 'getUserIdentity' ) ) {
+				// MW 1.36+
+				$user = $parser->getUserIdentity();
+			} else {
+				$user = $parser->getUser();
+			}
 		}
 		$usergroups = MediaWikiServices::getInstance()->getUserGroupManager()
 			->getUserEffectiveGroups( $user, UserGroupManager::READ_NORMAL, !$wgRightFunctionsAllowCaching );
@@ -142,7 +159,12 @@ class ExtRightFunctions {
 			$user = User::newFromName($name);
 			$user->load();
 		} else {
-			$user = $parser->getUser();
+			if ( method_exists( $parser, 'getUserIdentity' ) ) {
+				// MW 1.36+
+				$user = $parser->getUserIdentity();
+			} else {
+				$user = $parser->getUser();
+			}
 		}
 		$usergroups = MediaWikiServices::getInstance()->getUserGroupManager()
 			->getUserEffectiveGroups( $user, UserGroupManager::READ_NORMAL, !$wgRightFunctionsAllowCaching );
@@ -204,9 +226,16 @@ class ExtRightFunctions {
 		$rigor = $wgRightFunctionsAllowExpensiveQueries ?
 			\MediaWiki\Permissions\PermissionManager::RIGOR_SECURE :
 			\MediaWiki\Permissions\PermissionManager::RIGOR_QUICK;
+		if ( method_exists( $parser, 'getUserIdentity' ) ) {
+			// MW 1.36+
+			$user = MediaWikiServices::getInstance()
+				->getUserFactory()->newFromUserIdentity( $parser->getUserIdentity() );
+		} else {
+			$user = $parser->getUser();
+		}
 		if(\MediaWiki\MediaWikiServices::getInstance()
 			->getPermissionManager()
-			->userCan($right, $parser->getUser(), $title, $rigor)
+			->userCan($right, $user, $title, $rigor)
 		) {
 			return $then;
 		}
