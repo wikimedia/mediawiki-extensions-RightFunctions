@@ -98,7 +98,7 @@ class ExtRightFunctions {
 			$user = $parser->getUser();
 		}
 		$userrights = "";
-		$rights = $user->getRights();
+		$rights = MediaWikiServices::getInstance()->getPermissionManager()->getUserPermissions( $user );
 		foreach($rights as $value) {
 			$userrights = "$userrights"."\n* $value";
 		}
