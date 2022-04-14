@@ -288,14 +288,28 @@ class ExtRightFunctions {
 			$title = $parser->getTitle();
 		}
 		$type = "0{$type}"; //dummy first character so that strpos doesn't return 0.
-		if($title->isProtected() && strpos($type, 'f')) {
-			return $then;
-		}
-		if($title->isSemiProtected() && strpos($type, 's')) {
-			return $then;
-		}
-		if($title->isCascadeProtected() && strpos($type, 'c')) {
-			return $then;
+		if ( method_exists( MediaWikiServices::class, 'getRestrictionStore' ) ) {
+			// MW 1.37+
+			$restrictionStore = MediaWikiServices::getInstance()->getRestrictionStore();
+			if($restrictionStore->isProtected($title) && strpos($type, 'f')) {
+				return $then;
+			}
+			if($restrictionStore->isSemiProtected($title) && strpos($type, 's')) {
+				return $then;
+			}
+			if($restrictionStore->isCascadeProtected($title) && strpos($type, 'c')) {
+				return $then;
+			}
+		} else {
+			if($title->isProtected() && strpos($type, 'f')) {
+				return $then;
+			}
+			if($title->isSemiProtected() && strpos($type, 's')) {
+				return $then;
+			}
+			if($title->isCascadeProtected() && strpos($type, 'c')) {
+				return $then;
+			}
 		}
 		if(strpos($type, 'n')) {
 			global $wgNamespaceProtection;
@@ -334,8 +348,14 @@ class ExtRightFunctions {
 		}
 		$iscascade = false;
 		$cascrest = '';
-		if($title->isCascadeProtected()) {
-			$cascaderestrictions = $title->getCascadeProtectionSources();
+		if ( method_exists( MediaWikiServices::class, 'getRestrictionStore' ) ) {
+			// MW 1.37+
+			$restrictionStore = MediaWikiServices::getInstance()->getRestrictionStore();
+		} else {
+			$restrictionStore = null;
+		}
+		if($restrictionStore ? $restrictionStore->isCascadeProtected($title) : $title->isCascadeProtected()) {
+			$cascaderestrictions = $restrictionStore ? $restrictionStore->getCascadeProtectionSources($title) : $title->getCascadeProtectionSources();;
 			foreach(array_slice($cascaderestrictions, 1) as $groups) {
 				foreach($groups as $action => $restrictions) {
 					if($action == $right) {
@@ -348,7 +368,7 @@ class ExtRightFunctions {
 			}
 		}
 		$cascrest = trim(trim($cascrest, $sep));
-		$localrest = $title->getRestrictions($right);
+		$localrest = $restrictionStore ? $restrictionStore->getRestrictions($title,$right) : $title->getRestrictions($right);
 		if(is_array($localrest)){
 			$localrest = array_pop($localrest);
 		}
