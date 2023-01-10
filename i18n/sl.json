@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"rightfunctions-desc": "Funkcije razčlenjevalnika na podlagi dovoljenj",
+	"rightfunctions-rest1": "$1 $2",
+	"rightfunctions-rest2": "$1 $2$5 $3 $4",
+	"rightfunctions-rest3": "$1 $2$7 $3 $4$7 $5 $6",
+	"rightfunctions-sep": ",",
+	"rightfunctions-casc": "(iz kaskadnih virov)",
+	"rightfunctions-local": "(iz lokalne strani)",
+	"rightfunctions-ns": "(iz zaščite imenskega prostora)"
+}
