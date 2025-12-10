@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Bennylin",
-			"IvanLanin"
+			"IvanLanin",
+			"Penyuwangi"
 		]
 	},
 	"rightfunctions-desc": "Fungsi parser berdasarkan hak pengguna",
 	"rightfunctions-casc": "(dari sumber beruntun)",
-	"rightfunctions-local": "(dari halaman lokal)",
+	"rightfunctions-local": "(dari halaman setempat)",
 	"rightfunctions-ns": "(dari pelindungan ruang nama)"
 }
