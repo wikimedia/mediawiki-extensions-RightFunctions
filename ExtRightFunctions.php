@@ -185,7 +185,7 @@ class ExtRightFunctions {
 				if ( $found || self::ifgroup( $parser, $parts[0], true, false ) ) {
 					return $parts[1];
 				} else {
-					$mwDefault =& \MediaWiki\MediaWikiServices::getInstance()->getMagicWordFactory()->get( 'default' );
+					$mwDefault = \MediaWiki\MediaWikiServices::getInstance()->getMagicWordFactory()->get( 'default' );
 					if ( $mwDefault->matchStartAndRemove( $parts[0] ) ) {
 						$default = $parts[1];
 					}
